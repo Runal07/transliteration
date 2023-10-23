@@ -1,0 +1,20 @@
+<!-- translation_app/templates/confirmation.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload Confirmation</title>
+</head>
+<body>
+    <h1>File Upload Confirmation</h1>
+    <p>File uploaded successfully:</p>
+    <ul>
+        <li>File Name: {{ uploaded_file.file.name }}</li>
+        <!-- Add more file details here -->
+    </ul>
+    <form method="post" action="{% url 'translate' %}">
+        {% csrf_token %}
+        <input type="hidden" name="file_id" value="{{ uploaded_file.id }}">
+        <button type="submit">Translate</button>
+    </form>
+</body>
+</html>

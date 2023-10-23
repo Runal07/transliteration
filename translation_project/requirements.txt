@@ -1,0 +1,5 @@
+openpyxl
+google-cloud
+google-cloud-translate
+pandas
+ai4bharat.transliteration 
